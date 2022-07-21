@@ -47,6 +47,8 @@ $(document).ready(function () {
     $('.mobile-nav-overlay').click(function () {
         $(this).fadeOut();
         $('.mobile-nav').fadeOut();
+        $('.mobile-nav__list .header-sub-nav').slideUp();
+        $('.mobile-nav__list .header-navbar__item .header-navbar__item-icon').removeClass('open');
     });
 
     // Fixed Header When Window Scroll
