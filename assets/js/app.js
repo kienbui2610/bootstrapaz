@@ -52,13 +52,16 @@ $(document).ready(function () {
     });
 
     // Fixed Header When Window Scroll
-    let positionOfBanner = $('.slider').offset().top;
-    console.log(positionOfBanner);
-    $(window).scroll(function () {
-        if ($(window).scrollTop() >= positionOfBanner) {
-            $('.fixed-header').show();
-        } else {
-            $('.fixed-header').hide();
-        }
-    });
+
+    if ($(window).width() > 992) {
+        let positionOfBanner = $('.slider').offset().top;
+        console.log(positionOfBanner);
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= positionOfBanner) {
+                $('.fixed-header').show();
+            } else {
+                $('.fixed-header').hide();
+            }
+        });
+    }
 });
